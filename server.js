@@ -47,9 +47,9 @@ app.get('/',(req,res)=>{
 
 
 
-app.get('zaids', async (req,res)=>{
+app.get('/zaids', async (req,res)=>{
     const allZaids = await Zaid.find()
-    res.render('all-zaids.ejs',{zaids: allZaids})
+    res.render('all-zaids.ejs',{zaids:allZaids})
 })
 
 app.get('/zaids/new', (req, res)=>{
